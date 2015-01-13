@@ -1,4 +1,9 @@
 class DiffsController < ApplicationController
+  def index
+    @diff = Diff.new
+    render :show
+  end
+
   def create
     @diff = Diff.new(diffs_params)
     render :show
