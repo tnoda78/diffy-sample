@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
+ruby '2.0.0'
 
 gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +13,7 @@ gem 'puma'
 gem 'diffy'
 gem 'haml-rails'
 gem 'rails-assets-bootstrap'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
