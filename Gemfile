@@ -23,5 +23,6 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-coolline'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
