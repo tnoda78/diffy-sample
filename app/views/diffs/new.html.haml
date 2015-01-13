@@ -1,0 +1,11 @@
+= form_for @diff, :url => { :action => :create } do |f|
+  = f.label :before
+  = f.text_area :before
+  %br
+  %br
+  = f.label :after
+  = f.text_area :after
+  %br
+  %br
+  = f.submit :show
+
