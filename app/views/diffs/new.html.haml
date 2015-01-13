@@ -1,11 +1,9 @@
 = form_for @diff, :url => { :action => :create } do |f|
-  = f.label :before
-  = f.text_area :before
-  %br
-  %br
-  = f.label :after
-  = f.text_area :after
-  %br
-  %br
-  = f.submit :show
+  .form-group
+    = f.label :before, html: { for: "before" }
+    = f.text_area :before, class: "form-control", rows: 10
+  .form-group
+    = f.label :after, html: { for: "after" }
+    = f.text_area :after, class: "form-control", rows: 10
+  = f.submit :Show, class: "btn btn-primary"
 

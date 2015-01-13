@@ -1,16 +1,17 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 
 gem 'rails', '4.2.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'turbolinks'
 gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma'
 gem 'diffy'
 gem 'haml-rails'
+gem 'rails-assets-bootstrap'
 
 group :development, :test do
   gem 'byebug'
