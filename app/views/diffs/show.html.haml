@@ -1,3 +1,4 @@
 = @diff.diff_content.html_safe
 %br
-= link_to "Back", { controller: "diffs", action: "new" }, { :class => "btn btn-default" }
+%a.btn.btn-default{ onclick: "history.back();" }
+  Back
