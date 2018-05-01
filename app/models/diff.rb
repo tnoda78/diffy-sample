@@ -1,7 +1,7 @@
 class Diff
   include ActiveModel::Model
 
-  attr_accessor :before, :after
+  attr_writer :before, :after
 
   def diff_content
     diff_info = Diffy::Diff.new(diff_before, diff_after, diff: "-U 3", include_plus_and_minus_in_html: true,
@@ -9,14 +9,22 @@ class Diff
     diff_info.to_s(:html)
   end
 
+  def before
+    @before || ""
+  end
+
+  def after
+    @after || ""
+  end
+
   private
 
   def diff_before
-    "#{self.before.chomp}#{new_line}"
+    "#{before.chomp}#{new_line}"
   end
 
   def diff_after
-    "#{self.after.chomp}#{new_line}"
+    "#{after.chomp}#{new_line}"
   end
 
   def new_line
